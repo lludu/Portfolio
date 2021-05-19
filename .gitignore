@@ -1,3 +1,5 @@
 .DS_Store
 *.shtml
 secret.txt
+project_test/
+test/
