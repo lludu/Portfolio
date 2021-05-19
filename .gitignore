@@ -1,9 +1,3 @@
 .DS_Store
-400.shtml
-401.shtml
-402.shtml
-403.shtml
-404.shtml
-413.shtml
-500.shtml
-cp_errordocument.shtml
+*.shtml
+secret.txt
