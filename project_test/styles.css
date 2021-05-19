@@ -1,0 +1,19 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle, rgba(227, 227, 227, 0.9106382978723404) 0%, rgba(243, 246, 255, 0.8978723404255319) 100%);
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 1200px;
+    min-height: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+    color: #171718;
+}
+
+.navbar-custom {
+    background-color: lightgreen;
+}
