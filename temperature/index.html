@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- Bootstrap needs  "shrink-to-fit=no" in the meta viewport to work -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Portfolio of Logo Designer Andrew Ash from Lancaster, Pennsylvania">
+
+
+    <title>Challenge Temperature Converter</title>
+
+    <!-- Bootstrap CSS, Always First CSS Loaded, disabled when not needed -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Load Personal CSS Under this comment -->
+    <style>
+        .container {
+            background-image: url(https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80);
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.55), 5px 5px 20px rgba(0, 169, 251, 0.5);
+        }
+        
+        section {
+            padding-top: 20vh;
+        }
+        
+        .btn-primary {
+            background-color: rgb(0, 169, 251);
+        }
+    </style>
+
+
+
+</head>
+
+<body style="background: #e4e4e4">
+
+    <section>
+
+
+        <div class="container text-center bg-light  rounded-lg rounded border border-dark" style="max-width:500px;">
+
+            <div class="row">
+                <div class="col pt-3 pb-3">
+                    <h3>Temperature Converter</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col text-right">
+                    <p>Enter your number to convert:</p>
+                </div>
+                <div class="col text-left"><input type="text" id="e-temp"></div>
+            </div>
+
+            <div class="row">
+                <div class="col text-right">
+                    <p>Converted Temperature:</p>
+                </div>
+                <div class="col text-left"><input type="text" id="d-temp" disabled></div>
+            </div>
+
+            <div class="row mb-3 pb-3">
+                <div class="col text-right"><button type="button" class="btn btn-primary" onclick="cely()">To Celsius</button></div>
+                <div class="col text-left"><button type="button" class="btn btn-primary" onclick="fahr()">To Fahrenheit</button></div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- Optional Bootstrap JavaScript, disabled when not needed -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js " integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV " crossorigin="anonymous "></script> -->
+    <!-- Load Personal Javascript Under this comment -->
+    <script src="temp.js "></script>
+
+</body>
+
+</html>
