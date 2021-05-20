@@ -83,7 +83,7 @@ function animatePress(currentColor){
 
 
 // use event listener to start the game
-$(document).keydown(function(){
+$(document).on('keydown click', function(){
     if (!started){
       $('#level-title').text('Level '+level);
       nextSequence()
