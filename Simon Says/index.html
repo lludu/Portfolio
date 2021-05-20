@@ -4,35 +4,40 @@
 <head>
   <meta charset="utf-8">
   <title>Simon</title>
+  <!-- Bootstrap CSS, Always First CSS Loaded, disabled when not needed -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 
 <body>
-  <h1 id="level-title">Press A Key to Start</h1>
+  <h1 id="level-title">Press Any Key to Start</h1>
+  <div class="container2">
+    <div class="row2">
+
+      <div type="button" id="green" class="butn green">
+
+      </div>
+
+      <div type="button" id="red" class="butn red">
+
+      </div>
+    </div>
+
+    <div class="row2">
+
+      <div type="button" id="yellow" class="butn yellow">
+
+      </div>
+      <div type="button" id="blue" class="butn blue">
+
+      </div>
+
+    </div>
+
+  </div>
   <div class="container">
-    <div lass="row">
-
-      <div type="button" id="green" class="btn green">
-
-      </div>
-
-      <div type="button" id="red" class="btn red">
-
-      </div>
-    </div>
-
-    <div class="row">
-
-      <div type="button" id="yellow" class="btn yellow">
-
-      </div>
-      <div type="button" id="blue" class="btn blue">
-
-      </div>
-
-    </div>
-
+    <button class="btn btn-light" onclick="mouseStart()">Start Game</button>
   </div>
 
 

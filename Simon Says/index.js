@@ -11,7 +11,7 @@ var started = false;
 //Create a new pattern
 function nextSequence() {
 
-    $(".btn").css("pointer-events","auto");
+    $(".butn").css("pointer-events","auto");
 
   //reset user array to start next Level
   userClickedPattern = [];
@@ -83,7 +83,7 @@ function animatePress(currentColor){
 
 
 // use event listener to start the game
-$(document).on('keydown click', function(){
+$(document).on('keydown', function(){
     if (!started){
       $('#level-title').text('Level '+level);
       setTimeout(function () {
@@ -122,7 +122,7 @@ function checkAnswer(currentLevel){
     $('#level-title').text('Game Over, Press Any Key to Restart');
     console.log('wrong');
     startOver();
-    $(".btn").css("pointer-events","none");
+    $(".butn").css("pointer-events","none");
   }
 }
 
@@ -131,4 +131,18 @@ function startOver(){
   level = 0;
   gamePattern=[];
   started=false;
+}
+
+function mouseStart(){
+  if (!started){
+    $('#level-title').text('Level '+level);
+    setTimeout(function () {
+      nextSequence();
+    }, 1000);
+    started=true;
+
+  }
+  else{
+    return
+  }
 }
