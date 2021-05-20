@@ -1,5 +1,15 @@
 .DS_Store
+
+#SHTML files from BlueHost
 *.shtml
-secret.txt
-project_test/
-test/
+
+#Ignore Project Test Folders
+*00.*
+
+#Ignores Boilerplate Files
+core.html
+core.js
+core.css
+
+#Ignores Working Project Files
+*WebDev*
