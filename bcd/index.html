@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- Bootstrap needs  "shrink-to-fit=no" in the meta viewport to work -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Business Card Designer by Andrew Ash">
+
+
+    <title>Business Card Designer</title>
+
+    <!-- Bootstrap CSS, Always First CSS Loaded, disabled when not needed -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Load Google Font Style Sheet under this comment -->
+
+    <!-- Load Personal CSS Under this comment -->
+    <link rel="stylesheet" href="bcd.css">
+
+
+
+</head>
+
+<body>
+
+    <!-- TITLE BAR -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container justify-content-center">
+            <span class="navbar-brand mb-0 h1">Buisness Card Designer</span>
+        </div>
+    </nav>
+
+
+    <!-- Dynamic Area -->
+    <div class="container bg-info">
+        <div class="cards d-flex justify-content-center pt-2 pb-2">
+            <div class="card border-info " style="min-width: 20rem; min-height: 150px;" id="cardy">
+                <div class="card-header">
+                    <p class="card-text mb-0 font-weight-bold" id="cName">Company Name</p>
+                    <p class="card-text text-muted muted" id="cMessage">Company Message</p>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title mb-0 font-weight-bold" id="urName">Your Name</h5>
+                    <p class="card-text" id="urJob">Job Title</p>
+                    <p class="card-text smol" id="urEmail">Email:</p>
+                    <p class="card-text smol" id="urPhone">Phone:</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- INPUT AREA -->
+    <div class="container pt-2 bg-light">
+        <form>
+
+
+            <!-- Company input-->
+            <div class="form-group">
+                <label class="col-md-8 control-label" for="companyName">Company Name</label>
+                <div class="col-md-12">
+                    <input id="companyName" name="companyName" type="text" placeholder="Enter Company Name" class="form-control input-md" onkeyup="cNamePressed()">
+
+                </div>
+            </div>
+
+            <!-- Slogan input-->
+            <div class="form-group">
+                <label class="col-md-8 control-label" for="companyMessage">Company Slogan</label>
+                <div class="col-md-12">
+                    <input id="companyMessage" name="companyMessage" type="text" placeholder="Enter Company Slogan" class="form-control input-md" onkeyup="cMessagePressed()">
+
+                </div>
+            </div>
+
+
+
+            <div class="form-group row">
+
+                <!-- BG Color input-->
+                <label for="backColor" class="col-sm-8 col-form-label ml-3">Background Color</label>
+                <div class="col-md-12">
+                    <input type="color" class="form-control" id="backColor" value="#00AEEF">
+                </div>
+
+                <!-- Text Color input-->
+                <label for="typeColor" class="col-sm-8 col-form-label ml-3">Text Color</label>
+                <div class="col-md-12">
+                    <input type="color" class="form-control" id="typeColor" value="#3d3d3d">
+                </div>
+
+                <!-- Text Align input-->
+                <div class="col-sm-8">
+                    <label for="typeAlign" class="col col-form-label">Text Align</label>
+                    <div class="col-md-12">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary" id="typeL" onclick="typeLClick()">Left</button>
+                            <button type="button" class="btn btn-secondary" id="typeC" onclick="typeCClick()">Center</button>
+                            <button type="button" class="btn btn-secondary" id="typeR" onclick="typeRClick()">Right</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="mt-5 pb-5">
+
+
+            <!-- Name Input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="yourName">Your Name</label>
+                <div class="col-md-12">
+                    <input id="yourName" name="yourName" type="text" placeholder="Enter Your Name" class="form-control input-md" required="" onkeyup="urNamePressed()">
+
+                </div>
+            </div>
+
+            <!-- Job Title input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="yourJob">Job Title</label>
+                <div class="col-md-12">
+                    <input id="yourJob" name="yourJob" type="text" placeholder="Enter Your Job Title" class="form-control input-md" onkeyup="urJobPressed()">
+
+                </div>
+            </div>
+
+            <!-- Email input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="yourEmail">Email</label>
+                <div class="col-md-12">
+                    <input id="yourEmail" name="yourEmail" type="text" placeholder="Enter Your Email Address" class="form-control input-md" required="" onkeyup="urEmailPressed()">
+
+                </div>
+            </div>
+
+            <!-- Phone input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="yourPhone">Phone #</label>
+                <div class="col-md-12">
+                    <input id="yourPhone" name="yourPhone" type="text" placeholder="Enter Your Phone Number" class="form-control input-md" required="" onkeyup="urPhonePressed()">
+
+                </div>
+            </div>
+
+
+
+
+
+            <div class="form-group row pt-5 pb-3">
+                <div class="col text-right"><button type="button" class="btn btn-primary btn-sm" id="subform" onclick="formSubmit()">Submit</button></div>
+                <div class="col text-left"><button type="button" class="btn btn-secondary btn-sm" id="clearform" onclick="formReset()">Clear</button></div>
+            </div>
+
+        </form>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional Bootstrap JavaScript, disabled when not needed -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
+    <!-- Load Personal Javascript Under this comment -->
+    <script src="bcd.js"></script>
+
+</body>
+
+</html>
